@@ -1,3 +1,5 @@
+This is my own settings of NexT theme to support my blog.
+
 # NexT
 
 > 精于心，简于形
