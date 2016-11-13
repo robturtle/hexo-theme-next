@@ -35,4 +35,5 @@
 
 {% block script_extra %}
   {% include '_scripts/pages/post-details.swig' %}
+  {% include '_scripts/busuanzi.swig' %}
 {% endblock %}

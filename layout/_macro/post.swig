@@ -80,6 +80,14 @@
             
           </span>
 
+          {% if not is_index %}
+            <span id="busuanzi_container_page_pv">
+              &nbsp; | &nbsp;
+              <span class="icon-eye"></span>
+              <span id="busuanzi_value_page_pv"></span> Visits
+            </span>
+          {% endif %}
+
           {% if post.categories and post.categories.length %}
             <span class="post-category" >
               &nbsp; | &nbsp;
@@ -155,19 +163,6 @@
                <span class="post-meta-item-text">{{__('post.visitors')}} </span>
                <span class="leancloud-visitors-count"></span>
               </span>
-          {% endif %}
-
-          {% if not is_index and theme.busuanzi_count.enable and theme.busuanzi_count.page_pv %}
-              &nbsp; | &nbsp;
-              <span class="page-pv">{{ theme.busuanzi_count.page_pv_header }}
-              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>{{ theme.busuanzi_count.page_pv_footer }}
-              </span>
-          {% endif %}
-          
-          {% if post.description and (not theme.excerpt_description or not is_index) %}
-              <div class="post-description">
-                  {{ post.description }}
-              </div>
           {% endif %}
 
         </div>
